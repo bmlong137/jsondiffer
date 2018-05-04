@@ -1,0 +1,8 @@
+# Ignore Maven artifacts
+target
+
+# Ignore Eclipse artifacts
+.settings
+.project
+.classpath
+

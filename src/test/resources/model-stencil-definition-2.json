@@ -1,0 +1,20 @@
+{
+  "3008" : {
+    "id" : 2002,
+    "name" : "Salesforce",
+    "type" : 1,
+    "description" : "The standard stencil-set with Salesforce integration"
+  },
+  "2013" : {
+    "id" : 2002,
+    "name" : "Salesforce",
+    "type" : 1,
+    "description" : "The standard stencil-set with Salesforce integration"
+  },
+  "2014" : {
+    "id" : 2002,
+    "name" : "Salesforce",
+    "type" : 1,
+    "description" : "The standard stencil-set with Salesforce integration"
+  }
+}

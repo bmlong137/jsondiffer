@@ -1,0 +1,134 @@
+{
+  "title" : "Process editor",
+  "namespace" : "http://b3mn.org/stencilset/bpmn2.0#",
+  "description" : "BPMN process editor",
+  "propertyPackages" : [ {
+    "name" : "sfRestRequestMethodpackage",
+    "properties" : [ {
+      "id" : "sfRestRequestMethod",
+      "type" : "String",
+      "title" : "Request Method",
+      "value" : "",
+      "description" : "The REST method, like GET, PUT, POST, or DELETE",
+      "popular" : true,
+      "custom" : {
+        "includeInXML" : true,
+        "xmlPropertyName" : "requestMethod"
+      }
+    } ]
+  }, {
+    "name" : "sfRestRequestContentVarpackage",
+    "properties" : [ {
+      "id" : "sfRestRequestContentVar",
+      "type" : "Variable",
+      "title" : "Request Content Variable",
+      "value" : "",
+      "description" : "The variable holding the body of the request.",
+      "popular" : true,
+      "custom" : {
+        "includeInXML" : true,
+        "xmlPropertyName" : "requestContentVar"
+      }
+    } ]
+  }, {
+    "name" : "sfRestRequestContentpackage",
+    "properties" : [ {
+      "id" : "sfRestRequestContent",
+      "type" : "Text",
+      "title" : "Request Content",
+      "value" : "",
+      "description" : "The body of the request.  Will be evaluated, so it may contain fields and variables.",
+      "popular" : true,
+      "custom" : {
+        "includeInXML" : true,
+        "xmlPropertyName" : "requestContent"
+      }
+    } ]
+  }, {
+    "name" : "sfRestRequestContentTypepackage",
+    "properties" : [ {
+      "id" : "sfRestRequestContentType",
+      "type" : "String",
+      "title" : "Request Content Type",
+      "value" : "",
+      "description" : "The content type of the request body, like application/json.  If no body is present, this is ignored.",
+      "popular" : true,
+      "custom" : {
+        "includeInXML" : true,
+        "xmlPropertyName" : "requestContentType"
+      }
+    } ]
+  }, {
+    "name" : "sfRestRequestPathpackage",
+    "properties" : [ {
+      "id" : "sfRestRequestPath",
+      "type" : "String",
+      "title" : "Request Path",
+      "value" : "",
+      "description" : "The URL path of the service, typically starting with \"/services\".  Will be evaluated, so it may contain fields and variables.",
+      "popular" : true,
+      "custom" : {
+        "includeInXML" : true,
+        "xmlPropertyName" : "requestPath"
+      }
+    } ]
+  }, {
+    "name" : "sfRestResponseContentVarpackage",
+    "properties" : [ {
+      "id" : "sfRestResponseContentVar",
+      "type" : "String",
+      "title" : "Response Content Variable",
+      "value" : "",
+      "description" : "The variable to hold the body of the response.",
+      "popular" : true,
+      "custom" : {
+        "includeInXML" : true,
+        "xmlPropertyName" : "responseContentVar"
+      }
+    } ]
+  }, {
+    "name" : "sfRestResponseJsonVarMappackage",
+    "properties" : [ {
+      "id" : "sfRestResponseJsonVarMap",
+      "type" : "Text",
+      "title" : "Response JSON Property/Variable Map",
+      "value" : "",
+      "description" : "A line by line mapping of JSON properties to variables.  Each line will take the form of JSON property name, followed by a \"=>\" delimiter, and then variable name.  Will be evaluated, so it may contain fields and variables.",
+      "popular" : true,
+      "custom" : {
+        "includeInXML" : true,
+        "xmlPropertyName" : "responseJsonVarMap"
+      }
+    } ]
+  } ],
+  "stencils" : [ {
+    "type" : "node",
+    "id" : "salesforce_rest_task",
+    "title" : "Salesforce REST Task",
+    "description" : "",
+    "groups" : [ "Salesforce" ],
+    "propertyPackages" : [ "overrideidpackage", "namepackage", "documentationpackage", "asynchronousdefinitionpackage", "exclusivedefinitionpackage", "executionlistenerspackage", "isforcompensationpackage", "sfRestRequestMethodpackage", "sfRestRequestPathpackage", "sfRestRequestContentTypepackage", "sfRestRequestContentVarpackage", "sfRestRequestContentpackage", "sfRestResponseContentVarpackage", "sfRestResponseJsonVarMappackage" ],
+    "hiddenPropertyPackages" : [ "servicetaskresultvariablepackage", "multiinstance_typepackage", "multiinstance_cardinalitypackage", "multiinstance_collectionpackage", "multiinstance_variablepackage", "multiinstance_conditionpackage" ],
+    "customIconId" : 3,
+    "view" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns=\"http://www.w3.org/2000/svg\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns:oryx=\"http://www.b3mn.org/oryx\"\n   xmlns:xlink=\"http://www.w3.org/1999/xlink\"\n\n   width=\"102\"\n   height=\"82\"\n   version=\"1.0\">\n  <defs></defs>\n  <oryx:magnets>\n    <oryx:magnet oryx:cx=\"1\" oryx:cy=\"20\" oryx:anchors=\"left\" />\n    <oryx:magnet oryx:cx=\"1\" oryx:cy=\"40\" oryx:anchors=\"left\" />\n    <oryx:magnet oryx:cx=\"1\" oryx:cy=\"60\" oryx:anchors=\"left\" />\n    \n    <oryx:magnet oryx:cx=\"25\" oryx:cy=\"79\" oryx:anchors=\"bottom\" />\n    <oryx:magnet oryx:cx=\"50\" oryx:cy=\"79\" oryx:anchors=\"bottom\" />\n    <oryx:magnet oryx:cx=\"75\" oryx:cy=\"79\" oryx:anchors=\"bottom\" />\n    \n    <oryx:magnet oryx:cx=\"99\" oryx:cy=\"20\" oryx:anchors=\"right\" />\n    <oryx:magnet oryx:cx=\"99\" oryx:cy=\"40\" oryx:anchors=\"right\" />\n    <oryx:magnet oryx:cx=\"99\" oryx:cy=\"60\" oryx:anchors=\"right\" />\n    \n    <oryx:magnet oryx:cx=\"25\" oryx:cy=\"1\" oryx:anchors=\"top\" />\n    <oryx:magnet oryx:cx=\"50\" oryx:cy=\"1\" oryx:anchors=\"top\" />\n    <oryx:magnet oryx:cx=\"75\" oryx:cy=\"1\" oryx:anchors=\"top\" />\n    \n    <oryx:magnet oryx:cx=\"50\" oryx:cy=\"40\" oryx:default=\"yes\" />\n  </oryx:magnets>\n  <g pointer-events=\"fill\" oryx:minimumSize=\"50 40\">\n    <defs>\n        <radialGradient id=\"background\" cx=\"10%\" cy=\"10%\" r=\"100%\" fx=\"10%\" fy=\"10%\">\n            <stop offset=\"0%\" stop-color=\"#ffffff\" stop-opacity=\"1\"/>\n            <stop id=\"fill_el\" offset=\"100%\" stop-color=\"#ffffcc\" stop-opacity=\"1\"/>\n        </radialGradient>\n    </defs>\n    \n    <rect id=\"text_frame\" oryx:anchors=\"bottom top right left\" x=\"1\" y=\"1\" width=\"94\" height=\"79\" rx=\"10\" ry=\"10\" stroke=\"none\" stroke-width=\"0\" fill=\"none\" />\n    <rect id=\"bg_frame\" oryx:resize=\"vertical horizontal\" x=\"0\" y=\"0\" width=\"100\" height=\"80\" rx=\"10\" ry=\"10\" stroke=\"#bbbbbb\" stroke-width=\"1\" fill=\"#f9f9f9\" />\n        <text \n            font-size=\"12\" \n            id=\"text_name\" \n            x=\"50\" \n            y=\"40\" \n            oryx:align=\"middle center\"\n            oryx:fittoelem=\"text_frame\"\n            stroke=\"#373e48\">\n        </text>\n        \n   <g oryx:anchors=\"top left\" oryx:minimumSize=\"20 20\" oryx:maximumSize=\"20 20\" transform=\"scale(0.7,0.7) translate(8,8)\">\n      <image x=\"0\" y=\"0\" width=\"20\" height=\"20\" xlink:href=\"/activiti-app/app/rest/image/3\" image-rendering=\"optimizeQuality\" />\n   </g>\n   \n  </g>\n</svg>",
+    "icon" : "icons/1-logo198.png",
+    "roles" : [ "Activity", "sequence_start", "sequence_end", "ActivitiesMorph", "all" ],
+    "custom" : {
+      "backgroundColor" : "#f9f9f9",
+      "customType" : "Service task",
+      "className" : "org.alfresco.support.activiti.salesforce.SalesforceRestDelegate",
+      "expression" : null,
+      "delegateExpression" : null,
+      "scriptFormat" : null,
+      "script" : null,
+      "asynchronous" : false,
+      "exclusive" : false
+    }
+  } ],
+  "stencilInfoAttributes" : {
+    "name" : "Salesforce",
+    "description" : "The standard stencil-set with Salesforce integration",
+    "stencilType" : 1,
+    "contentType" : "bpmn"
+  }
+}
